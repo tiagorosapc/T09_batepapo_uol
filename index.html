@@ -25,10 +25,10 @@
 
   <footer>
     <div class="entrada-mensagem">
-      <input placeholder="Escreva aqui..." class="input-mensagem"></input>
+      <input data-test="input-message" placeholder="Escreva aqui..." class="input-mensagem"></input>
       <span class="enviando">Enviando para Todos</span>
     </div>
-    <button onclick="enviarMensagem()">
+    <button onclick="enviarMensagem()" data-test="send-message">
       <ion-icon name="paper-plane-outline"></ion-icon>
     </button>
   </footer>

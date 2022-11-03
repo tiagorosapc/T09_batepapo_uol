@@ -108,7 +108,7 @@ function renderizarMensagens(resposta){
         if ( ehMensagemPrivada(mens) ){
             // MENSAGEM PRIVADA
             templateMensagem = `
-                <li class="conversa-privada">
+                <li class="conversa-privada" data-test="message">
                 <span class="horario">(${mens.time})</span>
                     <strong>${mens.from}</strong>
                         <span> reservadamente para </span>
@@ -120,7 +120,7 @@ function renderizarMensagens(resposta){
         if (mens.type === 'message'){
             // MENSAGEM PUBLICA
             templateMensagem = `
-            <li class="conversa-publica">
+            <li class="conversa-publica" data-test="message">
                 <span class="horario">(${mens.time})</span>
                     <strong>${mens.from}</strong>
                         <span> para </span>
@@ -132,7 +132,7 @@ function renderizarMensagens(resposta){
         if (mens.type === 'status'){
             // MENSAGEM STATUS
             templateMensagem = `
-            <li class="entrada-saida">
+            <li class="entrada-saida" data-test="message">
                 <span class="horario">(${mens.time})</span>
                     <strong>${mens.from}</strong>
                     <span> para </spa</strong>
